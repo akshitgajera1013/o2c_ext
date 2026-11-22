@@ -1,33 +1,9 @@
-### O2C Ext
+# O2C Ext (`o2c_ext`) — Anantchem ERPNext Extensions
 
-ERPNext Order to Cash extensions for Anantchem
-
-### Installation
-
-You can install this app using the [bench](https://github.com/frappe/bench) CLI:
-
-```bash
-cd $PATH_TO_YOUR_BENCH
-bench get-app $URL_OF_THIS_REPO --branch main
-bench install-app o2c_ext
-```
-
-### Contributing
-
-This app uses `pre-commit` for code formatting and linting. Please [install pre-commit](https://pre-commit.com/#installation) and enable it for this repository:
-
-```bash
-cd apps/o2c_ext
-pre-commit install
-```
-
-Pre-commit is configured to use the following tools for checking and formatting your code:
-
-- ruff
-- eslint
-- prettier
-- pyupgrade
-
-### License
-
-mit
+## Setup, Seed Data, Migration & Verification
+1. Ensure `o2c_ext` is installed on `erp.localhost` with `"erpnext"` in `required_apps` (`apps/erpnext` and `apps/frappe` remain untouched).
+2. Run migrations and clear cache:
+   ```bash
+   cd ~/frappe-bench
+   bench --site erp.localhost migrate
+   bench --site erp.localhost clear-cache

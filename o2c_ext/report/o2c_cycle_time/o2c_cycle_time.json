@@ -1,0 +1,10 @@
+{
+  "doctype": "Report",
+  "name": "O2C Cycle Time",
+  "report_name": "O2C Cycle Time",
+  "ref_doctype": "Sales Order",
+  "report_type": "Script Report",
+  "module": "o2c_ext",
+  "is_standard": "Yes",
+  "add_total_row": 0
+}

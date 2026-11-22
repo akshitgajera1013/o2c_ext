@@ -307,3 +307,18 @@ require_type_annotated_api_methods = True
 # List of apps whose translatable strings should be excluded from this app's translations.
 # ignore_translatable_strings_from = []
 
+doc_events = {
+	"Delivery Note": {
+		"validate": "o2c_ext.o2c_hooks.validate_delivery_note",
+		"on_submit": "o2c_ext.o2c_hooks.on_delivery_note_submit",
+	},
+	"Sales Invoice": {
+		"validate": "o2c_ext.o2c_hooks.validate_sales_invoice_price_lock",
+	},
+}
+
+fixtures = [
+	{"dt": "Custom Field", "filters": [["dt", "=", "Delivery Note"], ["fieldname", "=", "eway_bill_no"]]},
+	{"dt": "Workflow", "filters": [["name", "=", "Sales Order Credit Approval"]]},
+	{"dt": "Notification", "filters": [["name", "=", "Sales Order Pending Credit Approval"]]},
+]
