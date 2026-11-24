@@ -4,7 +4,7 @@ ERPNext extension app on `erp.localhost` for **Anantchem**, extending standard E
 
 ## Setup, Seed Data, Migration & Verification
 
-1. Ensure `o2c_ext` is installed on `erp.localhost` with `"erpnext"` in `required_apps` (`apps/erpnext` and `apps/frappe` remain untouched).
+1. Ensure `o2c_ext` is installed on `erp.localhost` with `"erpnext"` in `required_apps` (`apps/erpnext` and `apps/frappe`).
    
 2. Run migrations and clear cache:
    
